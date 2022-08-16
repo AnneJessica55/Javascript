@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar dois números</title>
+    <style>
+        body > p > input {
+            width:200px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(27, 31, 31);
+            color:antiquewhite;
+        }
+        p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p>Número 1: <input type="number" id ="txtn1" name = "txtn1" ></p>
+     <p>Número 2: <input type="number" id="txtn2" name="txtn2" ></p>
+    <input type="button" value = "Somar" id="clicador1">
+    <input type="button" value = "Raiz" id="clicador2">
+    <div id="res"><p>Resultado</p></div>
+    
+    <script>
+        let clicador1 = document.querySelector('input#clicador1');
+        let clicador2 = document.querySelector('#clicador2');
+        clicador1.addEventListener('click', somar);
+        clicador2.addEventListener('click', raiz)
+
+        function somar(){
+           
+            let tn1 = window.document.querySelector('#txtn1');
+            let tn2 = window.document.querySelector('#txtn2');
+            let res = window.document.querySelector('#res');
+            let num1 = Number(tn1.value);
+            let num2 = Number(tn2.value);
+            
+
+            res.innerHTML +=`<p>${num1} + ${num2} = ${num1 + num2}.</p>`;
+           
+        }
+
+        function raiz(){
+            let tn1 = document.querySelector('#txtn1');
+            let tn2 = document.querySelector('#txtn2');
+            let res = document.querySelector('#res');
+            let num1 = Number(tn1.value);
+            let num2 = Number(tn2.value);
+            res.innerHTML += `<p>Raiz(${num1}) = ${num1**0.5}.</p>
+            <p>Raiz(${num2}) = ${num2**0.5}.</p>`;
+        }
+
+    </script>
+
+
+</body>
+</html>

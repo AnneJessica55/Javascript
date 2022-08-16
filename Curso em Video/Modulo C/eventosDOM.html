@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body > div#area{
+            width:200px;
+            height:200px;
+            color:whitesmoke;
+            background-color:black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20pt;
+            text-align: center;
+            line-height: 190px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">Interaja...</div>
+    <script>
+        let seletor = document.querySelector('#area');//selecionou a parte do HTML
+        seletor.addEventListener('click', clicar);
+        seletor.addEventListener('mouseenter', entrar);
+        seletor.addEventListener('mouseout', sair)
+        function clicar(){
+            seletor.innerHTML = '<strong>Clicou</strong>';
+            seletor.style.background = 'red';
+            seletor.style.margin = '0'
+        }
+        function entrar(){
+            seletor.innerHTML = '<strong>Entrou</strong>';
+        }
+        function sair(){
+            seletor.innerHTML = '<strong>Interaja...</strong>';
+            seletor.style.background = 'black';
+            seletor.style.margin = 'auto';
+        }
+    </script>
+    
+</body>
+</html>
