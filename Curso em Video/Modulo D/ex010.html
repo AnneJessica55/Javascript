@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{ 
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="veloci">Velocidade</label><br>
+    <input type="number" id="veloci"> Km/h.<br>
+    <input type="button" value="Verificar" id = "verify">
+    <div id="verificacao">
+        <h2>Resultado:</h2>
+    </div>
+
+    <script>
+        let vel = document.querySelector('#veloci');
+        let verify = document.querySelector('#verify');
+        verify.addEventListener('click', verificador);
+
+        function verificador(){
+            let velocidade = Number(vel.value);
+            verificacao.innerHTML += `<p>Sua velocidade atual é de ${velocidade}Km/h.</p>`;
+            if ( velocidade > 60){
+             verificacao.innerHTML += `<p>Você está dirigindo acima da velocidade permitida. MULTADO!</p>`;
+            } else {
+                verificacao.innerHTML += `<p>Tenha uma boa Viagem!</p>`;
+            }
+            verificacao.innerHTML += `<p>Não esqueça de usar o cinto de segurança.</p>`;
+        }
+    </script>
+    
+</body>
+</html>
