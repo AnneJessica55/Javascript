@@ -28,9 +28,9 @@
 
         function verificador(){
             let velocidade = Number(vel.value);
-            verificacao.innerHTML += `<p>Sua velocidade atual é de ${velocidade}Km/h.</p>`;
+            verificacao.innerHTML += `<p>Sua velocidade atual é de <strong>${velocidade}Km/h</strong>.</p>`;
             if ( velocidade > 60){
-             verificacao.innerHTML += `<p>Você está dirigindo acima da velocidade permitida. MULTADO!</p>`;
+             verificacao.innerHTML += `<p>Você está dirigindo acima da velocidade permitida. <strong>MULTADO!</strong></p> <p>Tenha uma péssima viagem</p>`;
             } else {
                 verificacao.innerHTML += `<p>Tenha uma boa Viagem!</p>`;
             }

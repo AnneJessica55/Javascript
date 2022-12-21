@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="hdr">
+        <h1>Identificador de idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                <label for="inome">Digite seu nome:</label>
+                <input type="text" name="nome" id="inome">
+            </p>
+            <p>
+                <label >Selecione seu gênero</label>
+                <input type="radio" name="genero" value="Feminino" id="ifem"> Feminino
+                <input type="radio" name="genero" value="Masculino" id="imasc"> Masculino
+            </p>
+            <p><label for="iano">Digite o ano do nascimento: </label> 
+            <input type="number" name="ano" id="iano"></p>
+            <p><input type="button" value="Verificar" id="iveri">
+            <input type="reset" value="Limpar"></p>
+        </div>
+        </div>
+        <div id="msg">
+            <p>Preencha os dados acima para ver o resultado</p>
+        </div>
+        <div id="imagem"></div>
+    </section>
+    <footer><address>&copy; CursoemVídeo</address></footer>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Verificação de nacionalidade</h2>
+    <label for="inome">Digite aqui o seu nome.</label><br>
+    <input type="text" name="nome" id="inome"><br>
+    <label for="inacio">Digite aqui sua nacionalidade.</label><br>
+    <input type="text" name="nacio" id="inacio"><br>
+    <input type="button" value="verificar" id="iveri">
+    <div id="res"><p><strong>Nacionalidade:</strong></p></div>
+    <script>
+        let nome = document.querySelector('#inome');
+        let nacio = document.querySelector('#inacio');
+        let veri = document.querySelector('#iveri');
+        veri.addEventListener('click', verificar);
+        
+        function verificar() {
+            inacio = String(nacio.value);
+            inome = String(nome.value);
+            if (inacio == "Brasil" || inacio == "Brazil"){
+                res.innerHTML +=`<p> Olá, ${nome.value}, você é brasileiro/brasileira sangue bom.</p>`;
+            } else{
+                res.innerHTML +=`<p>Hello ${nome.value}, you are a foreigner, welcome to Brazil.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
