@@ -27,6 +27,7 @@
         verify.addEventListener('click', verificador);
 
         function verificador(){
+            verificacao.innerHTML = '';
             let velocidade = Number(vel.value);
             verificacao.innerHTML += `<p>Sua velocidade atual é de <strong>${velocidade}Km/h</strong>.</p>`;
             if ( velocidade > 60){

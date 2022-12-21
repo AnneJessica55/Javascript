@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Modelo de exercício</title>
+    <title>Tabuada</title>
 </head>
 <body onload="carregar()">
     <header id="hdr">
-        <h1>Hora do dia</h1>
+        <h1>Hora da Tabuada</h1>
     </header>
     <section>
-        <div id="msg">testando...</div>
-        <div id="imagem"></div>
+        <div id="msg"><p>
+            <label for="inum">Tabuada de:</label>
+            <input type="number" name="num" id="inum"><input type="button" value="Gerar Tabuada" id="igerar">
+        </p></div>
+        <div id="res">
+            <select name="tabuada" id="itabuada" size="11"></select>
+        </div>
     </section>
     <footer><address>&copy; CursoemVídeo</address></footer>
     

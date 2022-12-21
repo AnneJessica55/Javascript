@@ -16,7 +16,7 @@
     <h2>Verificação de nacionalidade</h2>
     <label for="inome">Digite aqui o seu nome.</label><br>
     <input type="text" name="nome" id="inome"><br>
-    <label for="inacio">Digite aqui sua nacionalidade.</label><br>
+    <label for="inacio">Digite aqui o país de nascimento.</label><br>
     <input type="text" name="nacio" id="inacio"><br>
     <input type="button" value="verificar" id="iveri">
     <div id="res"><p><strong>Nacionalidade:</strong></p></div>
@@ -29,6 +29,7 @@
         function verificar() {
             inacio = String(nacio.value);
             inome = String(nome.value);
+            res.innerHTML = '';
             if (inacio == "Brasil" || inacio == "Brazil"){
                 res.innerHTML +=`<p> Olá, ${nome.value}, você é brasileiro/brasileira sangue bom.</p>`;
             } else{

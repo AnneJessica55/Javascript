@@ -30,12 +30,15 @@
         function verificar(){
             let name = String(nome.value);
             let age = Number(idade.value);
-            condi.innerHTML += `<p>Olá, ${name}</p>`;
+            condi.innerHTML = '';
             if ( age < 16 ){
+                condi.innerHTML += `<p>Olá, ${name}</p>`;
                 condi.innerHTML += `<p>Com a sua idade de ${age} anos você não pode votar ainda</p>`;
             } else if( age >= 18 && age < 70){
+                condi.innerHTML += `<p>Olá, ${name}</p>`;
                 condi.innerHTML += `Com a sua idade de ${age} anos você é obrigado a comparecer a votação`;
             } else {
+                condi.innerHTML += `<p>Olá, ${name}</p>`;
                 condi.innerHTML += `Com a sua idade de ${age} anos o voto é facultativo.`;
             }
         }

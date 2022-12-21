@@ -7,6 +7,8 @@ function verificar(){
     let anoAtual = dataAtual.getFullYear();
     let ano = Number(iano.value);
     let nome = String(inome.value);
+    msg.innerHTML = '';
+    imagem.innerHTML = '';
     if (ano > anoAtual || ano < 1900){
         window.alert('ERRO: Ano inválido.')
     } else{
@@ -18,7 +20,7 @@ function verificar(){
         img.setAttribute('id', 'foto'); // aqui você  acrescentou o atributo id ="foto" na img da variável img
         let gen ='';
         let idade = anoAtual - ano;
-        msg.innerHTML +=`<p>Olá, ${nome.value}, você tem/ fará esse ano ${idade} anos.</p>`
+        msg.innerHTML +=`<p>Olá, ${nome.value}, você tem/ fará esse ano ${idade} anos.</p>`;
         
         if (fgen[0].checked){
             gen = "feminino";

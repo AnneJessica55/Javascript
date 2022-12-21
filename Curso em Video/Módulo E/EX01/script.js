@@ -34,7 +34,7 @@ function contar() {
                 }
                 res.innerHTML += `\u{1F3C1}`;
             } else {
-                for(c = i; c >= f;){
+                for(c = i; c >= f; c--){
                     res.innerHTML += ` ${c} \u{1F449}`;
                 }
                 res.innerHTML += ` \u{1F3C1}`;
