@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Analise Numérica</title>
+</head>
+<body onload="carregar()">
+    <header id="hdr">
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <div id="msg">
+            <p><label for="inum">Acrescente um número (de 1 até 100):</label>
+            <input type="number" name="num" id="inum">
+            <input type="button" value="Adicionar" id="iadd">
+        <input type="button" value="Limpar" id="ilimpa"></p>
+            <p><select name="numeros" id="ilista" size="11"></select>
+            <input type="button" value="Executar" id="iexe"></p>
+        </div>
+        <div id="res"></div>
+    </section>
+    <footer><address>&copy; CursoemVídeo</address></footer>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
