@@ -24,7 +24,22 @@ function contar() {
                 res.innerHTML += ` \u{1F3C1}`;
             }
         } else {
-            window.alert('[ERRO] O passo não pode ser igual a 0. Considerando-o igual a 1.')
+            let i = Number(ini.value);
+            let f = Number(fim.value);
+            window.alert('[ERRO] O passo não pode ser igual a 0. Considerando-o igual a 1.<br>');
+            res.innerHTML += `<br>CONTANDO<br>`;
+            if (i < f){
+                for(c = i; c <= f; c++){
+                    res.innerHTML += ` ${c} \u{1F449}`;
+                }
+                res.innerHTML += `\u{1F3C1}`;
+            } else {
+                for(c = i; c >= f;){
+                    res.innerHTML += ` ${c} \u{1F449}`;
+                }
+                res.innerHTML += ` \u{1F3C1}`;
+
+            }
         }
 
     } else {
